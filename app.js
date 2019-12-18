@@ -29,6 +29,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
+// global vars 
+app.locals.errors = null 
 
 // express session middleware
 app.use(session({
@@ -39,7 +41,7 @@ app.use(session({
 }))
 //validate middleware
 
-app.use(expressValidate);
+// app.use(expressValidate);
 
 // messages middleware
 
